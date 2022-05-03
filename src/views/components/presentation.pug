@@ -2,7 +2,7 @@ mixin slideBtn(text, href)
     a(class='btn | bg-2 p-3 text-white round' href=href)= text
 
 mixin slide(prev, next)
-    .slide(class='h-85 w-80 block-center')
+    .slide(class='h-85 w-80 block-center pt-5')
         block
     .slide-actions(class='flex justify-between' hx-boost='true')
         if(prev != null)

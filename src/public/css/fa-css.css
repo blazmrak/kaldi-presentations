@@ -1,0 +1,75 @@
+svg:not(:host).icon, svg:not(:root).icon {
+    overflow: visible;
+    box-sizing: content-box
+}
+
+.icon {
+    display: inline-block;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em
+}
+
+.icon.i-2xs {
+    vertical-align: .1em
+}
+
+.icon.i-xs {
+    vertical-align: 0
+}
+
+.icon.i-sm {
+    vertical-align: -.0714285705em
+}
+
+.icon.i-lg {
+    vertical-align: -.2em
+}
+
+.icon.i-xl {
+    vertical-align: -.25em
+}
+
+.icon.i-2xl {
+    vertical-align: -.3125em
+}
+
+.i-2xs {
+    font-size: .625em;
+    line-height: .1em;
+    vertical-align: .225em
+}
+
+.i-xs {
+    font-size: .75em;
+    line-height: .0833333337em;
+    vertical-align: .125em
+}
+
+.i-sm {
+    font-size: .875em;
+    line-height: .0714285718em;
+    vertical-align: .0535714295em
+}
+
+.i-lg {
+    font-size: 1.25em;
+    line-height: .05em;
+    vertical-align: -.075em
+}
+
+.i-xl {
+    font-size: 1.5em;
+    line-height: .0416666682em;
+    vertical-align: -.125em
+}
+
+.i-2xl {
+    font-size: 2em;
+    line-height: .03125em;
+    vertical-align: -.1875em
+}
+
+.i-inverse {
+    fill: #fff
+}

@@ -1,0 +1,11 @@
+extends ../../layout/page
+include ../../components/presentation
+include ../../components/form
+
+block content
+    +basicSlide('Demo', '/presentations/htmx-alpinejs/htmx', '/presentations/htmx-alpinejs/alpinejs')
+        .content(class='flow')
+            .question(hx-get=_links.colorPopup hx-target='.popup-container' hx-swap='innerHTML' class='pointer' style=`color: ${data.color};`) Obarvaj me
+            .search
+                +input('Search', null, 'search')(hx-get=_links.things hx-target='.result' hx-swap='innerHTML' hx-trigger='keyup changed delay:500ms')
+            .result

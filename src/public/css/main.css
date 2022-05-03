@@ -1,0 +1,290 @@
+/* Variables */
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-1: #0090ff;
+    --color-2: #9000ff;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.2;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Global */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.slide-actions a {
+    font-size: 1.5rem;
+}
+
+.slide * {
+    font-size: 2rem;
+}
+
+.slide h1 {
+    font-size: 4rem;
+}
+
+.slide h2 {
+    font-size: 3.5rem;
+}
+
+/*-------------*/
+/* Composition */
+/*-------------*/
+.flow > * + * {
+    margin-top: var(--size, 1em);
+}
+
+.flow-compact > * + * {
+    margin-top: calc(var(--size, 1em) * 0.5);
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*---------*/
+/* Utility */
+/*---------*/
+
+/* Padding */
+.p-1 {
+    padding: 0.125em;
+}
+
+.p-3 {
+    padding: .5em;
+}
+
+/* Margin */
+.mb-1 {
+    margin-bottom: 0.125em;
+}
+
+.mb-3 {
+    margin-bottom: .5em;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+
+/* Alignment */
+.text-end {
+    text-align: end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.block-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Width */
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%
+}
+
+.max-w-2 {
+    max-width: 400px;
+}
+
+/* Height */
+.h-100 {
+    height: 100vh;
+}
+
+.h-90 {
+    height: 90vh;
+}
+
+.h-85 {
+    height: 85vh;
+}
+
+/* Border */
+.round {
+    border-radius: 5px;
+}
+
+/* Background */
+.bg-white {
+    background-color: white;
+}
+
+.bg-1 {
+    background-color: var(--color-1);
+}
+
+.bg-2 {
+    background-color: var(--color-2);
+}
+
+/* Text */
+.text-white {
+    color: var(--color-white)
+}
+
+
+/* Fonts */
+.font-7 {
+    font-weight: 700;
+}
+
+.text-10 {
+    font-size: 60px;
+}
+
+/* Borders */
+.rounded-1 {
+    border-radius: 0.3em;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid-1-3 {
+    grid-template-columns: 1fr 3fr;
+}
+
+/* Mouse */
+.pointer {
+    cursor: pointer;
+}
+
+/*-------*/
+/* Block */
+/*-------*/
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+}
+
+.popup {
+    width: 20em;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+
+}
+
+/* Exception */

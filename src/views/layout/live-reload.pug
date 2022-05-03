@@ -1,0 +1,9 @@
+mixin liveReload()
+    script.
+        window.socket = new WebSocket('ws://localhost:3001')
+        socket.onopen = () => {
+            console.log('Connected')
+            socket.onclose = () => console.log('Closed')
+            socket.onerror = () => console.log('Error connecting')
+            socket.onmessage = (event) => event.data === 'refresh' && window.location.reload()
+        }

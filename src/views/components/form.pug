@@ -1,0 +1,12 @@
+mixin form()
+    form(class='flow-compact')&attributes(attributes)
+        block
+
+mixin input(label, value, name)
+    .form-input(class='grid grid-1-3')
+        label(for=name)= label
+        input(name=name, value=value, autocomplete='off')&attributes(attributes)
+
+mixin actions()
+    .form-actions&attributes(attributes)
+        block

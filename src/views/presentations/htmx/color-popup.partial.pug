@@ -1,0 +1,12 @@
+include ../../components/popup
+include ../../components/form
+
++popup('Izberi barvo')
+    +actions()(class='flex justify-between')
+        form(@submit.prevent.stop='' hx-put=_links.color + '/green' hx-target='.popup-container' hx-swap='innerHTML')
+            button(type='submit') Zeleno
+        form(@submit.prevent.stop='' hx-put=_links.color + '/red' hx-target='.popup-container' hx-swap='innerHTML')
+            button(type='submit') Rdeče
+        form(@submit.prevent.stop='' hx-put=_links.color hx-target='.popup-container' hx-swap='innerHTML')
+            input(type="hidden" name="color" value="blue")
+            button(type='submit') Modro

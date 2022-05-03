@@ -1,0 +1,16 @@
+include live-reload
+
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" type="text/css" href="/public/css/main.css")
+        link(rel="stylesheet" type="text/css" href="/public/css/fa-css.css")
+        script(defer, src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js")
+        script(defer src="https://unpkg.com/htmx.org@1.7.0")
+    body
+        .popup-container
+        .content
+            block content
+    if $env.isDevelopment === true
+        +liveReload()

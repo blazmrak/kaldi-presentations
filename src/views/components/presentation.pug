@@ -1,0 +1,23 @@
+mixin slideBtn(text, href)
+    a(class='btn | bg-2 p-3 text-white round' href=href)= text
+
+mixin slide(prev, next)
+    .slide(class='h-85 w-80 block-center')
+        block
+    .slide-actions(class='flex justify-between' hx-boost='true')
+        if(prev != null)
+            +slideBtn('Prev', prev)
+        else
+            div
+        if(next !=null)
+            +slideBtn('Next', next)
+
+mixin jumbo(title, prev, next)
+    +slide(prev, next)
+        div(class='h-90 flex justify-center align-center')
+            h1(class='text-10')= title
+
+mixin basicSlide(title, prev, next)
+    +slide(prev, next)
+        h2(class='text-center')= title
+        block

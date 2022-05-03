@@ -1,0 +1,10 @@
+include ../icons/icons
+
+mixin popup(title)
+    .popup(class='modal bg-white', x-data='{open: true}', @click.away='open = false', x-show='open')&attributes(attributes)
+        .popup__title(class='flex justify-between bg-2 p-3')
+            h4(class='text-white')= title
+            span(@click.prevent='open = false')
+                +closeIcon()(class='i-inverse')
+        .popup__body(class='p-3')
+            block

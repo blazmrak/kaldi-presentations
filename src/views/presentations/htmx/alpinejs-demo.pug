@@ -1,0 +1,23 @@
+extends ../../layout/page
+include ../../components/presentation
+include ../../icons/icons
+
+mixin counterComponent()
+    .counter-component(x-data='{value: 0, counter: 0, multiplier: 0}')&attributes(attributes)
+        .counter(class='mb-1') Števec:
+            span(x-text='value')
+        button(@click='value += counter * multiplier; counter++; multiplier++;') Prištej 1
+
+mixin todoComponent()
+    .todo-component(class='flow-compact' x-data='{items: [], input: ""}')
+        input(@keyup.enter='items.push(input); input="";', x-model='input' placeholder='Todo item' class='w-100')
+        template(x-for='(item, index) in items')
+            .item(class='flex w-100 justify-between')
+                .name(x-text='item')
+                +closeIcon()(@click='items.splice(index, 1);')
+
+block content
+    +basicSlide('Demo', '/presentations/htmx-alpinejs/alpinejs', '/presentations/htmx-alpinejs/ending')
+        .container(class='flow p-3')
+            +counterComponent()(class='text-center')
+            +todoComponent()
